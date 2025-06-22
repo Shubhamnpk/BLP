@@ -26,6 +26,7 @@ import {
 } from "lucide-react"
 import { motion, useScroll, useTransform } from "framer-motion"
 import { useRef } from "react"
+import { title } from "process"
 
 export default function CVLanding() {
   const containerRef = useRef<HTMLDivElement>(null)
@@ -296,7 +297,7 @@ export default function CVLanding() {
                       </div>
                       <div>
                         <h3 className="text-lg md:text-xl font-bold">Bachelors Degree</h3>
-                        <p className="text-gray-600 text-sm mt-1">Computer Science</p>
+                        <p className="text-gray-600 text-sm mt-1">Social Science</p>
                         <div className="mt-3 flex items-center gap-2">
                           <span className="text-xs text-gray-500">Tri-Chandra Multiple Campus</span>
                           <span className="bg-rose-100 text-rose-800 px-2 py-0.5 rounded-full text-xs">2019</span>
@@ -337,7 +338,6 @@ export default function CVLanding() {
                       {[
                         "HTML",
                         "Java",
-                        "Database Management",
                         "Busy Software",
                         "Digital Marketing",
                         "AI Integration",
@@ -492,8 +492,8 @@ export default function CVLanding() {
             <div className="max-w-4xl mx-auto space-y-6">
               {[
                 {
-                  title: "AI Development Lead",
-                  company: "Tech Innovation Hub",
+                  title: "AI Development Lead and co-founder",
+                  company: "bitnepal (PVT) LTD",
                   period: "2023 - Present",
                   duties: [
                     "Leading AI integration projects",
@@ -504,7 +504,7 @@ export default function CVLanding() {
                 },
                 {
                   title: "Assistant Manager",
-                  company: "Nepal GS. Import & Export",
+                  company: "Nepal GS. Import & Export (PVT) LTD",
                   period: "July 2022 - Present",
                   duties: [
                     "Overseeing warehouse maintenance and organization",
@@ -515,7 +515,7 @@ export default function CVLanding() {
                 },
                 {
                   title: "Event Manager",
-                  company: "Tanneri Chaso",
+                  company: "Tanneri Chaso (NGO)",
                   period: "April - May 2022",
                   duties: [
                     "Managing budgets to ensure cost-effectiveness",
@@ -523,6 +523,16 @@ export default function CVLanding() {
                     "Supervising event staff and volunteers",
                   ],
                 },
+                {
+                  title: "Program coordinator",
+                  company: "Shiksha Nepal (NGO)",
+                  period: "2015 - Present ",
+                  duties: [
+                    "Organizing and coordinating programs",
+                    "overall management of programs",
+                    "board of directors",
+                  ],
+                }
               ].map((job, index) => (
                 <motion.div
                   key={index}
