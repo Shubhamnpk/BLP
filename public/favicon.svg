@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="var(--primary)" />
+      <stop offset="100%" stop-color="var(--primary-dark)" />
+    </linearGradient>
+    
+    <!-- Text Gradient -->
+    <linearGradient id="textGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="var(--text-highlight-1)" />
+      <stop offset="100%" stop-color="var(--text-highlight-2)" />
+    </linearGradient>
+    
+    <!-- Subtle texture -->
+    <pattern id="texture" patternUnits="userSpaceOnUse" width="20" height="20" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="20" stroke="var(--primary-foreground)" stroke-width="0.5" stroke-opacity="0.1" />
+    </pattern>
+    
+    <!-- Text shadow effect -->
+    <filter id="textGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="2" result="blur" />
+      <feFlood flood-color="var(--primary-dark)" flood-opacity="0.7" result="glowColor" />
+      <feComposite in="glowColor" in2="blur" operator="in" result="softGlow" />
+      <feMerge>
+        <feMergeNode in="softGlow"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="100" height="100" rx="20" fill="url(#bgGradient)" />
+  <rect width="100" height="100" rx="20" fill="url(#texture)" />
+  
+  <!-- Decorative elements -->
+  <circle cx="15" cy="15" r="6" fill="var(--accent)" opacity="0.8" />
+  <circle cx="85" cy="85" r="8" fill="var(--accent)" opacity="0.6" />
+  <circle cx="85" cy="15" r="4" fill="var(--accent)" opacity="0.4" />
+  
+  <!-- BL Monogram -->
+  <g filter="url(#textGlow)" transform="translate(50, 50)">
+    <g class="monogram">
+      <!-- Background shape for better visibility -->
+      <rect x="-42" y="-32" width="84" height="64" rx="10" fill="rgba(0,0,0,0.2)" />
+      
+      <!-- BL Text with gradient -->
+      <text x="0" y="10" 
+            font-family="'Poppins', 'Segoe UI', Arial, sans-serif" 
+            font-size="60" 
+            font-weight="800" 
+            text-anchor="middle" 
+            letter-spacing="-2"
+            fill="url(#textGradient)"
+            style="paint-order: stroke;
+                   stroke: var(--text-stroke);
+                   stroke-width: 1.5;
+                   stroke-linejoin: round;">BL</text>
+    </g>
+  </g>
+  
+  <style type="text/css">
+    /* Theme colors */
+    :root {
+      --primary: rgb(190, 18, 60);
+      --primary-dark: rgb(150, 10, 45);
+      --primary-foreground: #ffffff;
+      --accent: rgba(255, 255, 255, 0.2);
+      --text-highlight-1: #ffffff;
+      --text-highlight-2: #f0f0f0;
+      --text-stroke: rgba(0, 0, 0, 0.3);
+    }
+    
+    /* Dark theme overrides */
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --primary: rgb(159, 15, 50);
+        --primary-dark: rgb(120, 10, 35);
+        --primary-foreground: #F9FAFB;
+        --accent: rgba(255, 255, 255, 0.15);
+        --text-highlight-1: #ffffff;
+        --text-highlight-2: #e0e0e0;
+        --text-stroke: rgba(0, 0, 0, 0.4);
+      }
+    }
+    
+    /* Smooth transitions */
+    rect, text, circle, .monogram {
+      transition: all 0.3s ease;
+    }
+    
+    /* Animation */
+    @keyframes subtlePulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.03); }
+    }
+    
+    .monogram {
+      transform-origin: center;
+      animation: subtlePulse 8s ease-in-out infinite;
+    }
+  </style>
+</svg>
