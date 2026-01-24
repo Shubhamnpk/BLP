@@ -494,12 +494,12 @@ export default function CVLanding() {
                 {
                   title: "AI Development Lead and co-founder",
                   company: "bitnepal (PVT) LTD",
-                  period: "2023 - Present",
+                  period: "2025 - Present",
                   duties: [
                     "Leading AI integration projects",
                     "Developing machine learning solutions",
                     "Managing technical teams",
-                    "Implementing AI-driven automation",
+                  
                   ],
                 },
                 {
