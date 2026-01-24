@@ -71,10 +71,12 @@ export function SiteHeader() {
 
               <div className="h-4 w-px bg-border" />
 
-              <Button className="bg-rose-600 hover:bg-rose-700 shadow-sm hover:shadow-md transition-all">
-                <Download className="mr-2 h-4 w-4" />
-                Download CV
-              </Button>
+              <a href="/myresume resize.pdf" download>
+                <Button className="bg-rose-600 hover:bg-rose-700 shadow-sm hover:shadow-md transition-all">
+                  <Download className="mr-2 h-4 w-4" />
+                  Download CV
+                </Button>
+              </a>
             </div>
           </div>
 
@@ -120,10 +122,12 @@ export function SiteHeader() {
                   </div>
                 </div>
 
-                <Button className="w-full bg-rose-600 hover:bg-rose-700 shadow-sm hover:shadow-md transition-all">
-                  <Download className="mr-2 h-4 w-4" />
-                  Download CV
-                </Button>
+                <a href="/myresume resize.pdf" download className="w-full">
+                  <Button className="w-full bg-rose-600 hover:bg-rose-700 shadow-sm hover:shadow-md transition-all">
+                    <Download className="mr-2 h-4 w-4" />
+                    Download CV
+                  </Button>
+                </a>
               </div>
             </SheetContent>
           </Sheet>
