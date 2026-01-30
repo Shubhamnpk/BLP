@@ -146,9 +146,8 @@ export default function CVLanding() {
                   </a>
                   <div className="flex gap-2">
                     {[
-                      { Icon: Github, label: "GitHub", href: "https://github.com/bhagawotilama" },
-                      { Icon: Twitter, label: "Twitter", href: "https://twitter.com/bhagawotilama" },
-                      { Icon: Linkedin, label: "LinkedIn", href: "https://linkedin.com/in/bhagawotilama" },
+                      { Icon: Github, label: "GitHub", href: "https://github.com/Bhagwoti" },
+                      { Icon: Linkedin, label: "LinkedIn", href: "https://www.linkedin.com/in/bhagawoti-lama" },
                     ].map(({ Icon, label, href }, i) => (
                       <Button
                         key={i}
