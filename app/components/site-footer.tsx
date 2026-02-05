@@ -70,9 +70,8 @@ export function SiteFooter() {
             <h3 className="text-base font-medium tracking-wide">Connect</h3>
             <div className="flex gap-2">
               {[
-                { Icon: Github, label: "GitHub", href: "#" },
-                { Icon: Twitter, label: "Twitter", href: "#" },
-                { Icon: Linkedin, label: "LinkedIn", href: "#" },
+                { Icon: Github, label: "GitHub", href: "https://github.com/Bhagwoti" },
+                { Icon: Linkedin, label: "LinkedIn", href: "https://www.linkedin.com/in/bhagawoti-lama" },
               ].map(({ Icon, label, href }) => (
                 <Button
                   key={label}
